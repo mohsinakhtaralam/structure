@@ -1,0 +1,104 @@
+Recommandations 
+
+
+Codevolution
+aks
+https://www.youtube.com/watch?v=QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3
+https://www.youtube.com/watch?v=9VIiLJL0H4Y&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=3
+
+=================================================================================
+Note: incase of : export default (after the function & at the end) :: we can import with any name without {}
+
+incase of name export (with the function on top e.g. export const App = () => (){}) ==== import with {} with the same name 
+
+https://www.youtube.com/watch?v=5_PdMS9CLLI&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=12
+
+Conditional Rendering
+https://www.youtube.com/watch?v=7o5FPaVA9m0&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=16
+
+1.  if/else in JSX (in Return)
+2. Element Variable 
+
+    let message ;
+    if (this.state.isLoggedIn) {
+        message = <div> Welcome to Dunya News  </div>
+    } else  {
+        message = <div> Welcome guest </div>
+    }
+
+    return 
+
+-----------------------------------------
+04-07-2024
+rendering lists
+https://www.youtube.com/watch?v=5s8Ol9uw-yM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=17
+
+Map Method
+==================================================
+Styling in React JS
+https://www.youtube.com/watch?v=j5P9FHiBVNo&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=20
+
+1. Regular CSS StyleSheets
+
+    conditionally apply a class, based on state or props 
+    two class with template literals  on a single div
+
+
+2. inline Styling
+
+    create object and apply style attribute 
+
+3. CSS Module
+
+    react-scripts 2 or higher, now 5
+    *.module.CSS
+    
+    import "myStyle.css"   
+    <div className="error">
+    
+    import styles from "myStyle.module.css"
+    <div className={styles.success}>
+
+
+4. CSS in JS Libraries  (Better approach, styled components)
+
+React Fragment
+https://www.youtube.com/watch?v=bHdh1T0-US4&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=25
+
+
+https://www.youtube.com/watch?v=FXa9mMTKOu8&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=28
+
+Refs
+=============================================================================================
+09-07-2024
+Tailwind 
+============================================================================================
+https://www.youtube.com/watch?v=bxmDnn7lrnk&list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw&index=1
+********************************************************************************************
+
+step 1:
+npm init -y
+
+step 2:
+npm install tailwindcss
+
+step 3: In package.json file add a script
+ "build-css": "tailwindcss build src/style.css -o public/style.css"
+
+step 4: 
+npm run buildcss
+Note: in public output file style.css will be created from above command 
+
+
+default tailwind config file creation
+npx tailwindcss init --full
+
+blank tailwind config file 
+npx tailwindcss init
+
+
+
+
+
+
+
