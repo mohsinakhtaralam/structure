@@ -1,0 +1,209 @@
+15-06-2024
+https://www.youtube.com/watch?v=d5ooYpXioqE&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=5
+
+**************************************
+in case of vite project :
+npm run dev
+**************************************
+
+name export 
+import {} from './src/'
+
+default export
+import Hello from './'
+
+jsx: js in HTML   : {}
+js variable 
+js expression
+js functions
+
+props 
+
+StricMode makes console.log twice , when removed , it will console one time
+--------------------------------------------------------------------------------------------
+de-structuring of props : 20-06-2024
+https://www.youtube.com/watch?v=n5WWqx8a4tg&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=10
+
+11:   Immutable
+12:   passing & D-Structuring arrays and object throught props
+13:   Map function in JS  const result = fruits.map(java=> <ul> <li> {java} </li></ul> )
+------------------------Fruits.jsx----------------------------working code-----------------
+import React from 'react'
+
+export default function Fruits() {
+  const fruits = ["apple", "orange", "pineapple", "kiwi"]
+ 
+  return (   <div><ul> {fruits.map(java=>  <li key={java}> {java} </li>)}</ul></div>  )
+}
+
+------------------------Fruits.jsx----------------------------
+
+14:   rendering array of objects 
+--------------------------------------------working code -----------------
+import React from "react";
+
+export default function Fruits() {
+  // const fruits = ["apple", "orange", "pineapple", "kiwi"]
+  const fruits = [
+    { name: "Apple", price: 37, emoji: "🍎" },
+    { name: "Banana", price: 18, emoji: "🍌" },
+    { name: "Pineapple", price: 52, emoji: "🍍" },
+  ];
+
+  return (
+    <React.Fragment>
+      <ul>
+        {fruits.map(phall=> <li key={phall.name}> {phall.emoji} Fruit Name : {phall.name} and Price $ {phall.price}</li>)}
+      </ul>
+    </React.Fragment>
+  );
+}
+
+--------------------------------------------working code -----------------
+15:   Rendering components inside a loop 
+
+-----------------------
+import React from "react";
+import Fruit from "./Fruit";
+
+export default function Fruits() {
+  // const fruits = ["apple", "orange", "pineapple", "kiwi"]
+  const fruits = [
+    { name: "Apple", price: 37, emoji: "🍎" },
+    { name: "Banana", price: 18, emoji: "🍌" },
+    { name: "Pineapple", price: 52, emoji: "🍍" },
+  ];
+
+  return (
+    <React.Fragment>
+      <ul>
+        {fruits.map((fruit) => (
+          <Fruit key={fruit.name} name={fruit.name} price={fruit.price} emoji={fruit.emoji} />
+        ))}
+      </ul>
+    </React.Fragment>
+  );
+}
+------------------------------------------------------------------------
+16:   Conditionally Rendering JSX & Components
+17:   Conditional Rendering Using Element Variables
+      **** use only one return statement in any component ****
+18:   Using Ternary Operators In React
+19:   Conditionally Rendering List Items
+
+***************************************************************
+      import React from 'react'
+
+export default function Fruit({name, price, emoji}) {
+  return (
+   <React.Fragment>
+    <li key={name}>
+      {price > 5 ? (<h1>{emoji} {name} {price} </h1>) : ("") }
+      
+    </li>
+   </React.Fragment>
+  )
+}
+
+************************************************************************
+
+20     Conditionally Rendering A Message Using Ternary
+
+<li> 
+  {emoji} Fruit Name : {name} and Price is : {price} Status : {soldout?"sold out": "Available"}
+</li>
+
+-------------------------------------------------------------------------
+21:     Event Handling In React
+
+https://www.youtube.com/watch?v=yhqLxelS0Ew&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=24
+
+state Variable 
+
+24: Creating Multiple States In React
+
+function Form() {
+  const [name, setName] = useState("");
+  function handleChange() {
+    setName(e.target.value)
+  }
+  return (
+    <React.Fragment>
+      <h1> User Input Form</h1>
+      <form >
+      <input type="text" name="" id="" defaultValue="zoom" onChange={(e)=>handleChange(e)} />
+      </form>
+    </React.Fragment>
+  )
+}
+
+export default Form
+*************************************************************
+ 26: Handling Multiple Inputs In React
+ spread Operator
+-------------------------------------------------------------
+ 27: Handling Form Submission In React
+------------------------------------------------------------
+28: Todo App Part 1 Setting Up The App
+https://www.youtube.com/watch?v=3BR3UbCJux0&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=28
+
+npm create vite@4.1.0
+Project Name: 
+React Project
+frame work : JS
+cd 
+npm install 
+npm run dev
+-----------------------------------
+
+Remove Public Folder 
+
+In "src" folder only main.jsx and App.jsx is remaining , rest all removed
+delete related imports too. 
+------------------------------------------------------------------------
+https://www.youtube.com/watch?v=Y_IiNLsQmD8&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=29
+
+
+input type=text
+
+onChange = {(e)=> setTodo(e.target.value)}
+
+  <form onSubmit={handleSubmit}>
+
+</form>
+   function handleSubmit (e) {
+            e.preventDefault()
+    }
+https://www.youtube.com/watch?v=k1V2MnZR2lM&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=31
+
+
+1. inline                 style={{object}}
+
+2. styled components
+
+3. css module
+
+  a. mystyle.module.css 
+  b. import styles from './mystyle.module.css'
+  c. <h1 className={styles.header}>
+
+4. tailwind
+
+=========================================================================
+https://www.youtube.com/watch?v=i1z9l6cixFs&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=37
+===========================================================================================
+Material UI 
+
+option 2: https://www.youtube.com/watch?v=0KEpWHtG10M&list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58
+
+26-06-2024
+https://www.youtube.com/watch?v=BHEPVdfBAqE&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO
+
+Icon Library : 
+
+xs =>   mobile
+sm =>   tab
+md =>   desktop
+lg =>   monitors
+xl =>   larger monitors
+
